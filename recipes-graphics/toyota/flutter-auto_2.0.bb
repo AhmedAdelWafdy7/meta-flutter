@@ -21,15 +21,12 @@ DEPENDS += "\
     wayland \
     wayland-native \
     wayland-protocols \
-    compiler-rt \
-    libcxx \
-    lld-native \
-"
+    "
 
 REQUIRED_DISTRO_FEATURES = "wayland"
 
 HOMESCREEN_COMMIT ??= "dd6d9224de807e24f0f9150e5a2e4ee1b896ac3c"
-PLUGINS_COMMIT ??= "2163242e9973336153871ed63b34bb5ed8282145"
+PLUGINS_COMMIT ??= "e1736b395364b9b9c81998807013bb6936aa336b"
 
 SRC_URI = "\
     gitsm://github.com/toyota-connected/ivi-homescreen.git;protocol=https;branch=v2.0;name=homescreen \
@@ -40,15 +37,9 @@ SRCREV_homescreen = "${HOMESCREEN_COMMIT}"
 SRCREV_FORMAT .= "_plugins"
 SRCREV_plugins = "${PLUGINS_COMMIT}"
 
-CRASH_HANDLER_DSN ??= ""
+S = "${WORKDIR}/git"
 
-TOOLCHAIN = "clang"
-TOOLCHAIN_NATIVE = "clang"
-TC_CXX_RUNTIME = "llvm"
-PREFERRED_PROVIDER_llvm = "clang"
-PREFERRED_PROVIDER_llvm-native = "clang-native"
-PREFERRED_PROVIDER_libgcc = "compiler-rt"
-LIBCPLUSPLUS = "-stdlib=libc++"
+CRASH_HANDLER_DSN ??= ""
 
 inherit cmake features_check pkgconfig
 
@@ -159,9 +150,7 @@ PACKAGECONFIG[sanitize] = "-DSANITIZE_ADDRESS=ON, -DSANITIZE_ADDRESS=OFF"
 PACKAGECONFIG[examples] = "-DBUILD_EXAMPLES=ON, -DBUILD_EXAMPLES=OFF"
 PACKAGECONFIG[verbose] = "-DCMAKE_BUILD_TYPE=Debug -DDEBUG_PLATFORM_MESSAGES=ON, -DDEBUG_PLATFORM_MESSAGES=OFF"
 
-
 EXTRA_OECMAKE += "\
-    -D LLVM_CONFIG=${STAGING_BINDIR_NATIVE}/llvm-config \
     -D PLUGINS_DIR=${S}/ivi-homescreen-plugins/plugins \
     -D ENABLE_STATIC_LINK=OFF \
     -D ENABLE_LTO=ON \

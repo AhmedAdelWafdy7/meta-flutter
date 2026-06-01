@@ -25,3 +25,4 @@ inherit flutter-app
 RDEPENDS:${PN} += " \
     zenity \
 "
+S = "${WORKDIR}/git"

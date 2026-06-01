@@ -25,3 +25,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/battery_plus/battery_plus/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

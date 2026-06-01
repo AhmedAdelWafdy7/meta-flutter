@@ -25,3 +25,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/firebase_ml_model_downloader/firebase_ml_model_downloader/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

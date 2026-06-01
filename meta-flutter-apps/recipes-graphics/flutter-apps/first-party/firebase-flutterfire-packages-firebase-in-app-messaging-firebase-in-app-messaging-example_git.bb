@@ -25,3 +25,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/firebase_in_app_messaging/firebase_in_app_messaging/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

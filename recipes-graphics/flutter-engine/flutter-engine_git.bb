@@ -55,7 +55,7 @@ SRC_URI = "\
 SRCREV_FORMAT .= "_flutter_sdk"
 SRCREV_flutter_sdk = "${@get_flutter_hash(d)}"
 
-S = "${UNPACKDIR}/gn"
+S = "${WORKDIR}/gn"
 
 # musl-specific patches.
 SRC_URI:libc-musl += "\
@@ -241,7 +241,7 @@ do_configure() {
     #
     # Custom Build config
     #
-    cp ${UNPACKDIR}/BUILD.gn.in build/toolchain/custom/BUILD.gn
+    cp ${WORKDIR}/BUILD.gn.in build/toolchain/custom/BUILD.gn
     sed -i "s|@DEBUG_FLAGS@|${FLUTTER_ENGINE_DEBUG_FLAGS}|g" build/toolchain/custom/BUILD.gn
     sed -i "s|@CXX_LIBC_FLAGS@|${FLUTTER_ENGINE_CXX_LIBC_FLAGS}|g" build/toolchain/custom/BUILD.gn
 

@@ -40,6 +40,8 @@ SRCREV_homescreen = "${HOMESCREEN_COMMIT}"
 SRCREV_FORMAT .= "_plugins"
 SRCREV_plugins = "${PLUGINS_COMMIT}"
 
+S = "${WORKDIR}/git"
+
 CRASH_HANDLER_DSN ??= ""
 
 TOOLCHAIN = "clang"

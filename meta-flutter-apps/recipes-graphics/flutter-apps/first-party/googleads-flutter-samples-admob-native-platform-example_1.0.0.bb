@@ -21,3 +21,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "samples/admob/native_platform_example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

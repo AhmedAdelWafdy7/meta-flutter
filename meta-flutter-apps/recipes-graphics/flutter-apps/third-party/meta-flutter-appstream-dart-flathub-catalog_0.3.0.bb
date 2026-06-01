@@ -72,9 +72,7 @@ export SKIP_NATIVE_BUILD = "1"
 # advisories from pub.dev and fails with no network. The added hooks section
 # carries no dependency change, so the lockfile is unaffected.
 do_inject_user_defines() {
-    # Remove any pubspec_overrides.yaml a prior build of this recipe may have
-    # left behind: pub rejects a `hooks:` section there, and a stale one breaks
-    # `flutter pub get` even after the source is otherwise unchanged.
+    # Remove any pubspec_overrides.yaml a prior build of this recipe may have left behind
     rm -f ${S}/${FLUTTER_APPLICATION_PATH}/pubspec_overrides.yaml
     if ! grep -q '^hooks:' ${S}/${FLUTTER_APPLICATION_PATH}/pubspec.yaml; then
         cat >> ${S}/${FLUTTER_APPLICATION_PATH}/pubspec.yaml <<'EOF'
@@ -85,6 +83,9 @@ hooks:
       source: system
 EOF
     fi
+
+    # FORCE INNER CMAKE TO FIND THE NATIVE SQLITE HEADERS
+    echo "include_directories(${STAGING_INCDIR_NATIVE})" >> ${S}/CMakeLists.txt
 }
 addtask inject_user_defines after do_patch before do_archive_pub_cache
 do_inject_user_defines[dirs] = "${S}"
@@ -95,7 +96,7 @@ do_inject_user_defines[dirs] = "${S}"
 # libsqlite3.so.0. Depend on the runtime shared-library package that ships it.
 # Use libsqlite3-0, not the bare "libsqlite3" name, which resolves to
 # libsqlite3-dev and trips the dev-deps QA check.
-RDEPENDS:${PN} += "libsqlite3-0"
+RDEPENDS:${PN} += "libsqlite3"
 
 #
 # avoid conflict with flutter-app's do_compile
@@ -130,3 +131,4 @@ FILES:${PN}-dbg += "\
 
 INSANE_SKIP:${PN} += " libdir"
 INSANE_SKIP:${PN}-dbg += " libdir"
+S = "${WORKDIR}/git"

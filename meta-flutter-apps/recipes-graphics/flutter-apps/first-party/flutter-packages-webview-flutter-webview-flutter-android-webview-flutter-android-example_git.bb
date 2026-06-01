@@ -21,3 +21,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/webview_flutter/webview_flutter_android/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

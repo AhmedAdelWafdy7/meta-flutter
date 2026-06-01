@@ -30,3 +30,4 @@ APP_AOT_ENTRY_FILE = "main_prod.dart"
 do_compile[network] = "1"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

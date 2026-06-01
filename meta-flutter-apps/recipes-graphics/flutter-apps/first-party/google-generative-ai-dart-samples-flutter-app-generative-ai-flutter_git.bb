@@ -24,3 +24,4 @@ FLUTTER_BUILD_ARGS = "bundle --dart-define API_KEY=${GOOGLE_API_KEY}"
 APP_AOT_EXTRA = "-DAPI_KEY=${GOOGLE_API_KEY}"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

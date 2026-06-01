@@ -42,6 +42,8 @@ SRC_REPO_BRANCH ??= "master"
 SRC_URI = "git://${SRC_REPO};protocol=https;branch=${SRC_REPO_BRANCH}"
 SRCREV ??= "0d1f85aadc851e127215dca19b1fe4cc23030f27"
 
+S = "${WORKDIR}/git"
+
 inherit pkgconfig cmake features_check
 
 PACKAGECONFIG ??= "text_input raw_keyboard gstreamer"

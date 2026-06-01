@@ -21,3 +21,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "testing_app"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

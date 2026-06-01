@@ -27,3 +27,4 @@ RDEPENDS:${PN} += " \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
 "
+S = "${WORKDIR}/git"

@@ -25,3 +25,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/device_info_plus/device_info_plus/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

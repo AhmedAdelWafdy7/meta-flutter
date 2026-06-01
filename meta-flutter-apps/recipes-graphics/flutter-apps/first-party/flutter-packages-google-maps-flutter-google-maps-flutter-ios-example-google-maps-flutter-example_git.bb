@@ -21,3 +21,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/google_maps_flutter/google_maps_flutter_ios/example/ios15"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

@@ -20,3 +20,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "templates/endless_runner"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

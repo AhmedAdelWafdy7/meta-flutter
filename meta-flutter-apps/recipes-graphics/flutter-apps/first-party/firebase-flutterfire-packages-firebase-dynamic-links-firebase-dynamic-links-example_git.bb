@@ -25,3 +25,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/firebase_dynamic_links/firebase_dynamic_links/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

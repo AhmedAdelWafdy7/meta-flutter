@@ -36,8 +36,8 @@ SRC_URI = "\
     file://toolchain.gn.in \
     "
 
-S = "${UNPACKDIR}/gn/pdfium"
-B = "${UNPACKDIR}/gn/out"
+S = "${WORKDIR}/gn/pdfium"
+B = "${WORKDIR}/gn/out"
 
 inherit gn-fetcher pkgconfig
 

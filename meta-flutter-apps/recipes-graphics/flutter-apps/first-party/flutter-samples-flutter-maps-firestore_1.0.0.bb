@@ -22,3 +22,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "flutter_maps_firestore"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

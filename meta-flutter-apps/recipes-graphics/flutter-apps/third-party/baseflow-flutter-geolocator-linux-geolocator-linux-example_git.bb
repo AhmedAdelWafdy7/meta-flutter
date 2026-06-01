@@ -25,3 +25,4 @@ inherit flutter-app
 RDEPENDS:${PN} += " \
     geoclue \
 "
+S = "${WORKDIR}/git"

@@ -34,3 +34,4 @@ inherit flutter-app
 RDEPENDS:${PN} += " \
     tensorflow-lite \
 "
+S = "${WORKDIR}/git"

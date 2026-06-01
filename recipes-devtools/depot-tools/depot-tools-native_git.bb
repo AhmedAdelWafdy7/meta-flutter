@@ -9,9 +9,11 @@ SRC_URI = "git://chromium.googlesource.com/chromium/tools/depot_tools;protocol=h
 
 SRCREV = "39b2e4efd608584059aa5bb9af8e65597ca86276"
 
+S = "${WORKDIR}/git"
+
 inherit native
 
-VPYTHON_VIRTUALENV_ROOT ??= "${UNPACKDIR}/.vpython-root"
+VPYTHON_VIRTUALENV_ROOT ??= "${WORKDIR}/.vpython-root"
 
 do_configure[network] = "1"
 do_configure() {
@@ -24,7 +26,7 @@ do_configure() {
     export VPYTHON_VIRTUALENV_ROOT=${VPYTHON_VIRTUALENV_ROOT}
 
     # Required since depot_tools_config_dir will return a path based on XDG_CONFIG_HOME
-    export XDG_CONFIG_HOME=${UNPACKDIR}
+    export XDG_CONFIG_HOME=${WORKDIR}
 
     gclient --version
 }

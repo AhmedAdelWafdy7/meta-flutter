@@ -21,3 +21,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "third_party/packages/flutter_svg/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

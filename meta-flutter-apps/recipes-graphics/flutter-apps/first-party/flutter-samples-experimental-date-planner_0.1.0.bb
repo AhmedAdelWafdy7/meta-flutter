@@ -22,3 +22,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "experimental/date_planner"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

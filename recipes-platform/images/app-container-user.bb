@@ -26,7 +26,7 @@ USERADD_PARAM:${PN} = "-c '' -p '' -u ${APP_CONTAINER_USER_ID} -m ${APP_CONTAINE
 
 do_install () {
 
-	install -D -m 0664 ${UNPACKDIR}/${APP_CONTAINER_USER_NAME}_profile ${D}/home/${APP_CONTAINER_USER_NAME}/.profile
+	install -D -m 0664 ${WORKDIR}/${APP_CONTAINER_USER_NAME}_profile ${D}/home/${APP_CONTAINER_USER_NAME}/.profile
 
 	# The new users and groups are created before the do_install
 	# step, so you are now free to make use of them:

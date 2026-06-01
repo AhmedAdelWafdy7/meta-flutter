@@ -21,3 +21,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "textures/test_egl"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

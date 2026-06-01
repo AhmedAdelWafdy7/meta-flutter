@@ -21,3 +21,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/video_player/video_player_linux/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

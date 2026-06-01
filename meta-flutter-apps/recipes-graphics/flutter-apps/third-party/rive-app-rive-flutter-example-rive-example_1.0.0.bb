@@ -25,3 +25,4 @@ inherit flutter-app
 RDEPENDS:${PN} += " \
     rive-text \
 "
+S = "${WORKDIR}/git"

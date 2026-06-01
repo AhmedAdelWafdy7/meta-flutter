@@ -21,7 +21,7 @@ DEPENDS += "\
     libcxx \
     "
 
-S = "${UNPACKDIR}/gn"
+S = "${WORKDIR}/gn"
 
 SRCREV = "13d929085afa86e5902ed7293cca8509f099ee97"
 SRC_URI = " \
@@ -88,7 +88,7 @@ do_configure() {
     cd ${S}
 
     # prevent tmp path warning
-    cp ${UNPACKDIR}/gcc_toolchain.gni.in sdk/build/toolchain/gcc_toolchain.gni
+    cp ${WORKDIR}/gcc_toolchain.gni.in sdk/build/toolchain/gcc_toolchain.gni
     sed -i "s|@DEBUG_FLAGS@|${DEBUG_FLAGS}|g" sdk/build/toolchain/gcc_toolchain.gni
 
     # we only build one mode type

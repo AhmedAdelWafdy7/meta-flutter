@@ -22,3 +22,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "ai_recipe_generation"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

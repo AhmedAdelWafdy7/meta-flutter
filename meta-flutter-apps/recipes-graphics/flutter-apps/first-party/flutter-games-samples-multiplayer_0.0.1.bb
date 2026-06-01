@@ -20,3 +20,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "samples/multiplayer"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

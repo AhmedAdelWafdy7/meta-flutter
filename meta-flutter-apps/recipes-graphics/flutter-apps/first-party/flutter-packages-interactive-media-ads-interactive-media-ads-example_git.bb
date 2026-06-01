@@ -21,3 +21,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/interactive_media_ads/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

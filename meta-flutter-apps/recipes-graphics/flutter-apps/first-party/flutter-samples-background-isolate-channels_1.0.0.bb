@@ -21,3 +21,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "background_isolate_channels"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

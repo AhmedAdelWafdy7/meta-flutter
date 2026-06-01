@@ -25,3 +25,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/firebase_vertexai/firebase_vertexai/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

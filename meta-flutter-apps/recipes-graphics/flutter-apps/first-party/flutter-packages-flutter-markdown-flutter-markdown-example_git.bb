@@ -22,3 +22,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/flutter_markdown/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

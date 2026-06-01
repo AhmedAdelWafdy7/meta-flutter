@@ -21,3 +21,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/extension_google_sign_in_as_googleapis_auth/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

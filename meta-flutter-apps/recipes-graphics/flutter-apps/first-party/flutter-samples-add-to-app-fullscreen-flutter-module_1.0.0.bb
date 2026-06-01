@@ -22,3 +22,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "add_to_app/fullscreen/flutter_module"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

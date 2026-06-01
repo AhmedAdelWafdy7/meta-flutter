@@ -22,3 +22,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "experimental/varfont_shader_puzzle"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

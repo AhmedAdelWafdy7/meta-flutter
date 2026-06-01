@@ -22,3 +22,4 @@ PUBSPEC_IGNORE_LOCKFILE = "1"
 FLUTTER_APPLICATION_PATH = "packages/palette_generator/example"
 
 inherit flutter-app
+S = "${WORKDIR}/git"

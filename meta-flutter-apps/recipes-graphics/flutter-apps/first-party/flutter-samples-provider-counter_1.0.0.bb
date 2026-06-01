@@ -24,3 +24,4 @@ inherit flutter-app
 
 do_compile[network] = "1"
 
+S = "${WORKDIR}/git"

@@ -25,3 +25,4 @@ inherit flutter-app
 RDEPENDS:${PN} += " \
     pdfium \
 "
+S = "${WORKDIR}/git"

@@ -26,3 +26,4 @@ RDEPENDS:${PN} += " \
     flatpak \
     xdg-desktop-portal-gnome \
 "
+S = "${WORKDIR}/git"
